@@ -1,0 +1,30 @@
+<div class="container">
+    <%= form_tag(series_index_path, method: :get) do %>
+        <div class="row">
+            <div class="input-group mt-4 mb-3 col-8">
+                <%= search_field_tag :term, nil, class: "form-control", placeholder: "Search by actor"  %>
+            </div>
+            <%= submit_tag "Search", class: "btn btn-primary col-2 mt-4 mb-3" %>
+        </div>
+    <% end %>
+    
+    
+    <table class="table table-dark" >
+        <thead>
+            <tr>
+            <th scope="col">TV SERIES</th>
+            <th scope="col">ACTOR</th>
+            <th scope="col">AVERAGE RATING</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @series.each do |series|%>
+                <tr>
+                <td><%=series.name%></td>
+                <td><%=series.actor%></td>
+                <td><%=calculate_average_rating(series) %></td>
+                </tr>
+            <%end%>
+        </tbody>
+    </table>
+</div>
