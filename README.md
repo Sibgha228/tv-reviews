@@ -1,24 +1,12 @@
-# README
+# tv-reviews
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a test project which has a script to import the data in csv files to the database and a page to show all the TV series in your application. The page also show the average rating against the TV Series.It also includes functionality to search for TV series that an actor has acted in. 
 
-Things you may want to cover:
 
-* Ruby version
+<img width="1388" alt="Screenshot 2022-03-25 at 5 03 31 PM" src="https://user-images.githubusercontent.com/26971711/160117538-e95e1ed5-d899-48dc-99f3-02bfbf7eaec9.png">
 
-* System dependencies
 
-* Configuration
+#Ruby Version: 2.6.3
+#Rails Version: 6.0.4.7
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#Rake Task to import csv: import_csv
