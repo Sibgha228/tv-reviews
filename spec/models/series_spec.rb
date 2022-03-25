@@ -17,4 +17,9 @@ RSpec.describe Series, type: :model do
   it 'should create a valid record' do
     expect(subject.valid?).to be(true)
   end
+
+  it "should create services with review associations" do
+    series = build(:series_with_reviews)
+    expect(series.valid?).to eq(true)
+  end
 end

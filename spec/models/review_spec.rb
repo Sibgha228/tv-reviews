@@ -9,6 +9,8 @@ RSpec.describe Review, type: :model do
   it { should validate_presence_of(:rating) }
   it { should validate_presence_of(:review) }
 
+  it { should have_and_belong_to_many(:series) }
+
   it 'should create a valid record' do
     expect(subject.valid?).to be(true)
   end
