@@ -11,7 +11,7 @@ FactoryBot.define do
     shoot_location { 'MyString' }
     country { 'MyString' }
     factory :series_with_reviews do
-      after(:build) {|series| series.reviews = [create(:review)]}
+      after(:build) { |series| series.reviews = [create(:review)] }
     end
   end
 end
